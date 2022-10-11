@@ -1,0 +1,24 @@
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+
+    img{
+        border-radius: 50%;
+        background-color: white;
+        width: 210px;
+        height: 180px;   
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: lighter;
+        color: palevioletred;
+        padding-bottom: 50px;
+    }
+    
+}

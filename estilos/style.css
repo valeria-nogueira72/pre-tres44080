@@ -13,13 +13,16 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   margin-top: 0;
-  height: 200px;
+  height: 277px;
   padding: 20px;
   display: grid;
   justify-content: center;
   align-items: center;
   font-size: 90px;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
   color: palevioletred;
   box-shadow: brown 2px 4px 10px;
   background-color: bisque;
@@ -62,6 +65,7 @@ nav ul li a {
   display: flex;
   font-size: 20px;
   font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
 }
 
 .lista {
@@ -74,10 +78,22 @@ nav ul li a {
   padding: 5px;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: lighter;
+  color: palevioletred;
+  padding-bottom: 50px;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
+}
+
 h2, h3 {
   color: brown;
   font-size: 30px;
   font-weight: lighter;
+  font-family: Georgia, "Times New Roman", Times, sans-serif;
 }
 
 article {
@@ -91,75 +107,44 @@ article {
   flex-direction: column;
   text-align: center;
   padding: 5px;
-  height: 70px;
+  height: 85px;
+  font-weight: 200;
 }
 
-.caja .form .form-contac .form-titulo {
-  font-weight: normal;
-  font-size: 20px;
-  font-family: sans-serif;
-  color: brown;
+.flex-conteiner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: bisque;
+  margin: 50px 30px;
+  box-shadow: brown 2px 4px 6px;
+  padding: 20px;
+  border-radius: 2%;
+}
+
+.form {
+  min-width: 350px;
+  height: 350px;
+  flex: 1;
   text-align: center;
-  text-align: center;
-  padding: 14px 0px;
+  padding: 50px;
 }
 
-.caja .form .form-contac .form-titulo span {
-  color: brown;
-}
-
-.caja .form {
-  background-color: bisque;
-  box-shadow: brown 1px 2px 15px;
-  width: 200px;
-  height: 300px;
-  margin: auto;
-  padding: 5px 35px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-radius: 3px;
-}
-
-.caja .form .form-label {
-  display: block;
-  color: brown;
-  font-size: 16px;
-}
-
-.caja .form .form-imput .form-textarea {
-  background: rgba(194, 230, 241, 0.716);
-  border: none;
-  outline: none;
-  border-bottom: 2px solid brown;
+.form__input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border-radius: 2px;
-  font-size: 14px;
-  color: brown;
-}
-
-.caja .form .form-textarea {
-  resize: vertical;
-  max-height: 150px;
-  min-height: 50px;
-}
-
-.caja .form .btn-submit {
-  width: 100%;
-  font-family: sans-serif;
-  outline: none;
+  padding: 7px;
+  margin: 6px 0;
   border: none;
+  border-bottom: 3px solid brown;
+  background: wheat;
+  outline: none;
   color: brown;
-  cursor: pointer;
-  padding: 10px 0;
-  margin-top: 10px;
-  font-size: 16px;
 }
 
-.form-imput {
-  border: solid palevioletred 1px;
+.form textarea {
+  min-height: 80px;
+  resize: none;
 }
 
 .conteiner {
@@ -184,7 +169,8 @@ article {
 p {
   text-align: center;
   color: brown;
-  font: 1em sans-serif;
+  font: 20px sans-serif;
+  text-align: center;
 }
 
 footer {
@@ -196,8 +182,8 @@ footer {
 }
 
 .icons {
-  width: 35px;
-  height: 35px;
+  width: 55px;
+  height: 55px;
   margin-top: 40px;
   padding: 10px;
 }
@@ -226,8 +212,8 @@ header {
   grid-area: galeria;
 }
 
-.caja {
-  grid-area: caja;
+.form {
+  grid-area: form;
 }
 
 footer {
@@ -239,7 +225,7 @@ footer {
   margin-bottom: 1, 5m;
   display: grid;
   gap: 20px;
-  grid-template-areas: "header" "logo" "lista" "contenido" "conteiner" "galeria" "caja" "footer";
+  grid-template-areas: "header" "logo" "lista" "contenido" "conteiner" "galeria" "form" "footer";
 }
 
 .conteiner {
@@ -260,15 +246,25 @@ img {
   margin: 10px;
 }
 
+.img-donas {
+  max-width: 300%;
+  height: auto;
+}
+
 @media (min-width: 500px) {
   .envoltura {
     margin-top: 0px;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "header  header" "logo    logo" "lista   lista" "contenido contenido" "conteiner conteiner" "galeria  galeria" "caja      caja" "footer    footer";
+    grid-template-areas: "header  header" "logo    logo" "lista   lista" "contenido contenido" "conteiner conteiner" "galeria  galeria" "form      form" "footer    footer";
   }
   img {
     width: 300px;
-    height: 190px;
+    height: 200px;
+  }
+  .img-fluid {
+    max-width: 270px;
+    height: 250px;
+    margin: 3px;
   }
   footer {
     margin-top: 0;
@@ -277,7 +273,7 @@ img {
 @media (min-width: 768px) {
   .envoltura {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "header  header header" "logo      logo logo" "lista    lista lista" "contenido contenido contenido" "conteiner conteiner continer" "galeria   galeria galeria" "caja       caja      caja" "footer   footer   footer";
+    grid-template-areas: "header  header header" "logo      logo logo" "lista    lista lista" "contenido contenido contenido" "conteiner conteiner continer" "galeria   galeria galeria" "form       form      form" "footer   footer   footer";
   }
   .conteiner {
     display: grid;
@@ -287,7 +283,7 @@ img {
   }
   img {
     width: 300px;
-    height: 190px;
+    height: 200px;
   }
 }
 @media (min-width: 1024px) {

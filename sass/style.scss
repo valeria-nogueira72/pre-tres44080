@@ -6,8 +6,6 @@
 @import "nav";
 
 
-
-
 .lista{
     display: flex;
     flex-wrap: wrap;
@@ -17,12 +15,22 @@
     background-color: bisque; 
     padding: 5px;
 }
-
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: lighter;
+    color: palevioletred;
+    padding-bottom: 50px;
+    font-family: Georgia, 'Times New Roman', Times,  sans-serif;
+}
 
 h2,h3{
     color: brown;
     font-size: 30px;
     font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times,  sans-serif;
 }
 
 
@@ -37,73 +45,46 @@ article{
     flex-direction: column;
     text-align: center;
     padding: 5px;
-    height: 70px;
-}
-
-.caja .form .form-contac .form-titulo{
-    font-weight: normal;
-    font-size: 20px;
-    font-family: sans-serif;
-    color: brown;
-    text-align: center;
-    text-align: center;
-    padding: 14px 0px;
-}
-.caja .form .form-contac .form-titulo span{
-    color: brown;
-}
-
-.caja .form{
-    background-color: bisque;
-    box-shadow: brown 1px 2px 15px;
-    width: 200px;
-    height: 300px;
-    margin: auto;
-    padding: 5px 35px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-radius: 3px;
-} 
-.caja .form .form-label{
-    display: block;
-    color: brown;
-    font-size: 16px;
+    height: 85px;
+    font-weight: 200;
     
 }
-.caja .form .form-imput .form-textarea{
-    background: rgba(194, 230, 241, 0.716);
-    border: none;
-    outline: none;
-    border-bottom: 2px solid brown;
+
+.flex-conteiner{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: bisque;
+    margin: 50px 30px;
+    box-shadow: brown 2px 4px 6px;
+    padding: 20px;
+    border-radius: 2%; 
+}
+
+.form{
+    min-width: 350px;
+    height: 350px;
+    flex: 1;
+    text-align: center;
+    padding: 50px;
+}
+
+
+.form__input{
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    font-size: 14px;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid brown;
+    background: wheat;
+    outline: none;
     color: brown;
 
 }
-.caja .form .form-textarea{
-    resize: vertical;
-    max-height: 150px;
-    min-height: 50px;
-}
-
-.caja .form .btn-submit{
-    width: 100%;
-    font-family: sans-serif;
-    outline: none;
-    border: none;
-    color: brown;
-    cursor: pointer;
-    padding: 10px 0;
-    margin-top: 10px;
-    font-size: 16px;
-}
-.form-imput{
-    border: solid palevioletred 1px;
-    
+.form textarea{
+    min-height: 80px;
+    resize: none;
 }
 
 .conteiner{
@@ -114,11 +95,13 @@ article{
     justify-content: center;
     align-items: center;
 }
+
 .efec:hover{
     transform: scale(2);
     color: palevioletred;
     
 }
+
 .efec{
     transition-property: all;
     transition-duration: 3s;
@@ -129,7 +112,8 @@ article{
 p{
     text-align: center;
     color: brown;
-    font: 1em sans-serif;
+    font: 20px sans-serif;
+    text-align: center;
 }
 
 
@@ -143,8 +127,8 @@ footer{
 }
 
 .icons{
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     margin-top: 40px;
     padding: 10px;
     
@@ -172,8 +156,8 @@ header{
     grid-area: galeria;
 }
 
-.caja{
-    grid-area: caja;
+.form{
+    grid-area: form;
 }
 
 footer{
@@ -192,7 +176,7 @@ footer{
     "contenido"
     "conteiner"
     "galeria"
-    "caja"
+    "form"
     "footer";
 }
 .conteiner{
@@ -212,6 +196,10 @@ img{
     padding: 3px;
     margin: 10px;
 }
+.img-donas{
+    max-width: 300%;
+    height: auto;
+}
 
 
     
@@ -226,14 +214,21 @@ img{
         "contenido contenido"
         "conteiner conteiner"
         "galeria  galeria"
-        "caja      caja"
+        "form      form"
         "footer    footer";
     }
 img{
     width: 300px;
-    height: 190px;
+    height: 200px;
 
-} 
+}
+.img-fluid{
+    max-width: 270px;
+    height: 250px;
+    margin: 3px;
+
+}
+
     footer{
         margin-top: 0;
     }
@@ -251,7 +246,7 @@ img{
     "contenido contenido contenido"
     "conteiner conteiner continer"
     "galeria   galeria galeria"
-    "caja       caja      caja"
+    "form       form      form"
     "footer   footer   footer";
 }
 .conteiner{
@@ -263,10 +258,8 @@ img{
 }
 img{
     width: 300px;
-    height: 190px;
-    
-    
-    
+    height: 200px;
+        
 }
 
 }
